@@ -1,0 +1,9 @@
+--- cloudinit/util.py	2012-05-22 12:18:21.000000000 -0300
++++ cloudinit/util.py	2012-05-31 12:44:24.000000000 -0300
+@@ -227,7 +227,7 @@
+         stderr=subprocess.PIPE, stdin=subprocess.PIPE)
+     out, err = sp.communicate(input_)
+     if sp.returncode is not 0:
+-        raise subprocess.CalledProcessError(sp.returncode, args, (out, err))
++        raise subprocess.CalledProcessError(sp.returncode, args)
+     return(out, err)

@@ -26,6 +26,8 @@ Patch1:         cloud-init-0.6.3-no-runparts.patch
 Patch2:         cloud-init-0.6.3-lp970071.patch
 # Support subprocess.check_output on python < 2.7
 Patch3:         cloud-init-check_output.patch
+# Support subprocess.CalledProcessError on python < 2.7
+Patch4:         cloud-init-calledprocesserror.patch
 
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -60,6 +62,7 @@ ssh keys and to let the user run various scripts.
 %patch1 -p0
 %patch2 -p1
 %patch3 -p1
+%patch4 -p0
 
 cp -p %{SOURCE2} README.fedora
 
