@@ -16,6 +16,7 @@ Source3:        cloud-config.init
 Source4:        cloud-final.init
 Source5:        cloud-init.init
 Source6:        cloud-init-local.init
+Source7:        cc_yum_packages.py
 
 Patch0:         cloud-init-0.6.3-fedora.patch
 # Make runparts() work on Fedora
@@ -77,6 +78,7 @@ mkdir -p $RPM_BUILD_ROOT/%{_sharedstatedir}/cloud
 
 # We supply our own config file since our software differs from Ubuntu's.
 cp -p %{SOURCE1} $RPM_BUILD_ROOT/%{_sysconfdir}/cloud/cloud.cfg
+cp -p %{SOURCE7} %{python_sitelib}/cloudinit/CloudConfig/cc_yum_packages.py
 
 # Note that /etc/rsyslog.d didn't exist by default until F15.
 # el6 request: https://bugzilla.redhat.com/show_bug.cgi?id=740420
