@@ -81,7 +81,7 @@ mkdir -p $RPM_BUILD_ROOT/%{_sharedstatedir}/cloud
 
 # We supply our own config file since our software differs from Ubuntu's.
 cp -p %{SOURCE1} $RPM_BUILD_ROOT/%{_sysconfdir}/cloud/cloud.cfg
-cp -p %{SOURCE7} %{python_sitelib}/cloudinit/CloudConfig/cc_yum_packages.py
+cp -p %{SOURCE7} $RPM_BUILD_ROOT/%{python_sitelib}/cloudinit/CloudConfig/cc_yum_packages.py
 
 # Note that /etc/rsyslog.d didn't exist by default until F15.
 # el6 request: https://bugzilla.redhat.com/show_bug.cgi?id=740420
