@@ -10,8 +10,7 @@ frequency = CloudConfig.per_instance
 def yum_install(packages):
     cmd = ["yum", "--quiet", "--assumeyes", "install"]
     cmd.extend(packages)
-    cmd.append("--enablerepo=epel")
-    subprocess.check_call(cmd, env={"http_proxy": "http://proxy01.globoi.com:3128", "https_proxy": ""})
+    subprocess.check_call(cmd)
 
 
 def handle(_name, cfg, _cloud, log, args):
