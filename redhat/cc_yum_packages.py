@@ -8,7 +8,7 @@ frequency = CloudConfig.per_instance
 
 
 def yum_install(packages):
-    cmd = ["yum", "--quiet", "--assumeyes", "install"]
+    cmd = ["yum", "--assumeyes", "install"]
     cmd.extend(packages)
     subprocess.check_call(cmd)
 
