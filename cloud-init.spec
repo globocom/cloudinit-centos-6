@@ -2,7 +2,7 @@
 
 Name:           cloud-init
 Version:        0.6.3
-Release:        0.4.bzr532%{?dist}
+Release:        0.5.bzr532%{?dist}
 Summary:        Cloud instance init scripts
 
 Group:          System Environment/Base
@@ -142,7 +142,10 @@ fi
 
 
 %changelog
-* Thu May 31 2012 Francisco Souza <f@souza.cc> - 0.6.4-0.4.bzr532
+* Thu Aug 02 2012 Francisco Souza <f@souza.cc> - 0.6.3-0.5.bzr532
+- Removed --quiet from packages installation
+
+* Thu May 31 2012 Francisco Souza <f@souza.cc> - 0.6.3-0.4.bzr532
 - Support CentOS 6.2
 - Added yum-packages module
 
